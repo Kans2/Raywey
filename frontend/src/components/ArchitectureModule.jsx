@@ -68,7 +68,7 @@ export default function ArchitectureModule() {
                     {[
                         { icon: "🟢", label: "Runtime", value: "Node.js + Express" },
                         { icon: "🤖", label: "AI Model", value: "Groq Llama 3" },
-                        { icon: "🗄️", label: "Database", value: "SQLite (better-sqlite3)" },
+                        { icon: "🗄️", label: "Database", value: "MongoDB (Mongoose)" },
                         { icon: "⚛️", label: "Frontend", value: "React + Vite" },
                         { icon: "🛡️", label: "Security", value: "Helmet + Rate Limiting" },
                         { icon: "📖", label: "API Docs", value: "Swagger UI" },

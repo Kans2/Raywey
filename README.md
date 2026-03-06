@@ -2,7 +2,7 @@
 
 > **Role:** Full Stack / AI Intern | **Focus:** Applied AI for Sustainable Commerce
 
-An AI-powered platform that reduces manual catalog effort, improves B2B proposal generation, automates impact reporting, and enhances customer support — built with **Node.js + Express + MongoDB** and **Google Gemini AI**.
+An AI-powered platform that reduces manual catalog effort, improves B2B proposal generation, automates impact reporting, and enhances customer support — built with **Node.js + Express + MongoDB** and **Groq AI (Llama 3)**.
 
 ---
 
@@ -10,14 +10,14 @@ An AI-powered platform that reduces manual catalog effort, improves B2B proposal
 
 ### Prerequisites
 - Node.js ≥ 18
-- A free [Google Gemini API Key](https://aistudio.google.com/app/apikey)
+- A free [Groq API Key](https://console.groq.com/keys)
 - MongoDB Atlas account (or local MongoDB)
 
 ### 1. Backend Setup
 ```bash
 cd backend
 cp .env.example .env
-# Edit .env → add your GEMINI_API_KEY and MONGO_URI
+# Edit .env → add your GROQ_API_KEY and MONGO_URI
 npm install
 npm run dev
 ```
@@ -44,7 +44,7 @@ Raywey/
 │   ├── server.js               ← Entry point (CORS, Helmet, Rate Limit, Swagger)
 │   ├── config.js               ← Env-based configuration
 │   ├── ai/
-│   │   ├── client.js           ← Google Gemini wrapper
+│   │   ├── client.js           ← Groq AI wrapper
 │   │   └── logger.js           ← Dual-sink: MongoDB + logs/ai_log.jsonl
 │   ├── database/
 │   │   ├── db.js               ← Mongoose connection

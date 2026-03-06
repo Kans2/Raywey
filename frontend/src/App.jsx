@@ -28,6 +28,9 @@ export default function App() {
                 <p>Applied AI for Sustainable Commerce</p>
               </div>
             </div>
+            <span style={{ fontSize: 12, color: 'var(--text-secondary)', fontWeight: 500, letterSpacing: '0.02em' }}>
+              Built by <strong style={{ color: 'var(--accent-primary)' }}>Kannan S</strong>
+            </span>
             <div className="header-badge">
               <div className="status-dot" />
               Node.js + Groq
@@ -78,6 +81,8 @@ export default function App() {
           <a href="http://localhost:8000/api/docs" target="_blank" rel="noreferrer" style={{ color: "var(--accent-primary)", textDecoration: "none" }}>API Docs (Swagger)</a>
           <span style={{ margin: "0 12px" }}>·</span>
           <a href="http://localhost:8000/health" target="_blank" rel="noreferrer" style={{ color: "var(--accent-primary)", textDecoration: "none" }}>Health Check</a>
+          <span style={{ margin: "0 12px" }}>·</span>
+          <span>Built by <strong>Kannan S</strong></span>
         </div>
       </footer>
     </>

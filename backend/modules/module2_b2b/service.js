@@ -49,7 +49,7 @@ export async function generateProposal({ clientName, industry, budget, requireme
         fullResult: result,
     });
 
-    return { id: doc._id, ...result, created_at: doc.createdAt };
+    return { id: doc._id, client_name: clientName, industry, budget, ...result, created_at: doc.createdAt };
 }
 
 export async function getProposalById(id) {
