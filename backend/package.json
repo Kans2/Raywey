@@ -1,0 +1,36 @@
+{
+    "name": "rayeva-ai-backend",
+    "version": "1.0.0",
+    "description": "Rayeva AI Systems – Node.js + Express + MongoDB backend",
+    "main": "server.js",
+    "type": "module",
+    "scripts": {
+        "start": "node server.js",
+        "dev": "nodemon server.js"
+    },
+    "keywords": [
+        "ai",
+        "sustainable",
+        "commerce",
+        "groq",
+        "mongodb"
+    ],
+    "author": "Rayeva",
+    "dependencies": {
+        "cors": "^2.8.6",
+        "dotenv": "^17.3.1",
+        "express": "^5.2.1",
+        "express-rate-limit": "^8.2.1",
+        "groq-sdk": "^0.37.0",
+        "helmet": "^8.1.0",
+        "mongoose": "^8.9.5",
+        "morgan": "^1.10.1",
+        "swagger-jsdoc": "^6.2.8",
+        "swagger-ui-express": "^5.0.1",
+        "uuid": "^13.0.0",
+        "zod": "^4.3.6"
+    },
+    "devDependencies": {
+        "nodemon": "^3.1.14"
+    }
+}
