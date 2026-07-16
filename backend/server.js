@@ -6,6 +6,11 @@ import morgan from "morgan";
 import rateLimit from "express-rate-limit";
 import swaggerUi from "swagger-ui-express";
 import swaggerJsdoc from "swagger-jsdoc";
+import path from "path";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 import config from "./config.js";
 import { connectDb } from "./database/db.js";
@@ -80,13 +85,13 @@ app.get("/health", (req, res) => {
     });
 });
 
-app.get("/", (req, res) => {
-    res.json({
-        message: "Welcome to Rayeva AI Systems API (Node.js + MongoDB)",
-        docs: "/api/docs",
-        health: "/health",
-        version: "1.0.0",
-    });
+// ── Serve React Frontend (Production Build) ──────────────────────────────────
+const distPath = path.join(__dirname, "dist");
+app.use(express.static(distPath));
+
+// Catch-all: send index.html for any non-API route (SPA client-side routing)
+app.get(/^(?!\/api).*/, (req, res) => {
+    res.sendFile(path.join(distPath, "index.html"));
 });
 
 // ── Global Error Handler ──────────────────────────────────────────────────────
