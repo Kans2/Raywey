@@ -81,7 +81,7 @@ Raywey/
 **Output:**
 ```json
 {
-  "id": "665a...",
+  "id": "66a...",
   "primary_category": "Eco & Sustainable Goods",
   "sub_category": "Reusable Drinkware",
   "seo_tags": ["bamboo-water-bottle", "eco-friendly", "reusable", "plastic-free", "sustainable"],
@@ -177,13 +177,3 @@ curl -X POST http://localhost:8000/api/v1/proposals \
 ```
 
 ---
-
-## 📊 Evaluation Criteria
-
-| Criteria | Implementation |
-|----------|----------------|
-| **Structured AI Outputs (20%)** | Strict JSON schema, Zod validation, business-logic sanitization |
-| **Business Logic Grounding (20%)** | Predefined category lists, real price catalogs, budget hard constraints |
-| **Clean Architecture (20%)** | Layered: `router → service → ai/client`, no AI logic in routes |
-| **Practical Usefulness (20%)** | Real-world prompts, history retrieval, Swagger docs, React dashboard |
-| **Creativity & Reasoning (20%)** | Confidence scores, impact positioning, sustainability scoring, architecture outlines |
