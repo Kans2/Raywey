@@ -54,7 +54,10 @@ Built for the Rayeva AI Systems Internship Assignment.
 | Module 4 | AI WhatsApp Support Bot | 📐 Architecture Outlined |
       `,
         },
-        servers: [{ url: `http://localhost:${config.port}`, description: "Development server" }],
+        servers: [
+            ...(process.env.PUBLIC_URL ? [{ url: process.env.PUBLIC_URL, description: "Production server" }] : []),
+            { url: `http://localhost:${config.port}`, description: "Development server" },
+        ],
     },
     apis: ["./modules/**/*.js"],
 });

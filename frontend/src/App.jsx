@@ -78,9 +78,9 @@ export default function App() {
         <div className="app-container" style={{ textAlign: "center", fontSize: 12, color: "var(--text-muted)" }}>
           <span>🌿 Rayeva AI Systems</span>
           <span style={{ margin: "0 12px" }}>·</span>
-          <a href="http://localhost:8000/api/docs" target="_blank" rel="noreferrer" style={{ color: "var(--accent-primary)", textDecoration: "none" }}>API Docs (Swagger)</a>
+          <a href={`${import.meta.env.VITE_API_URL || "https://raywey.onrender.com"}/api/docs`} target="_blank" rel="noreferrer" style={{ color: "var(--accent-primary)", textDecoration: "none" }}>API Docs (Swagger)</a>
           <span style={{ margin: "0 12px" }}>·</span>
-          <a href="http://localhost:8000/health" target="_blank" rel="noreferrer" style={{ color: "var(--accent-primary)", textDecoration: "none" }}>Health Check</a>
+          <a href={`${import.meta.env.VITE_API_URL || "https://raywey.onrender.com"}/health`} target="_blank" rel="noreferrer" style={{ color: "var(--accent-primary)", textDecoration: "none" }}>Health Check</a>
           <span style={{ margin: "0 12px" }}>·</span>
           <span>Built by <strong>Kannan S</strong></span>
         </div>

@@ -261,7 +261,7 @@ export default function ProposalModule() {
 
                         <details>
                             <summary style={{ fontSize: 12, color: "var(--text-muted)", cursor: "pointer", marginBottom: 8 }}>View Raw JSON Output</summary>
-                            <JsonViewer data={result} />
+                            <JsonViewer data={(() => { const { id: _id, ...rest } = result; return rest; })()} />
                         </details>
                     </motion.div>
                 )}
