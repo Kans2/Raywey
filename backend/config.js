@@ -8,7 +8,7 @@ const config = {
     groqModel: process.env.GROQ_MODEL || "llama3-8b-8192",
     mongoUri: process.env.MONGO_URI || "mongodb://localhost:27017/rayeva",
     logLevel: process.env.LOG_LEVEL || "info",
-    allowedOrigins: (process.env.ALLOWED_ORIGINS || "http://localhost:5173"),
+    allowedOrigins: process.env.ALLOWED_ORIGINS ? process.env.ALLOWED_ORIGINS.split(',') : ["http://localhost:5173"],
     rateLimit: {
         windowMs: 15 * 60 * 1000, // 15 minutes
         max: parseInt(process.env.RATE_LIMIT_MAX || "60"),
